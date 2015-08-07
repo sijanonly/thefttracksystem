@@ -1,0 +1,90 @@
+{% load staticfiles %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Victims List</title>
+
+	 <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "css/bootstrap-glyphicons.css" %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div id="map_canvas" style="width: 1240px; height: 600px; "></div>
+
+	<script src="{% static "js/jquery-1.7.2.min.js" %}"></script>
+   <script src="{% static "js/jquery-ui.min.js" %}"></script>
+        <script src="{% static "js/bootstrap.js" %}"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?libraries=visualization&sensor=true_or_false">
+</script>
+
+<script type="text/javascript">
+	
+
+	var map;
+
+
+function drawMap() {
+  
+
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var Kathmandu = new google.maps.LatLng(27.7, 85.3);
+  var mapOptions = {
+    zoom:9,
+    center: Kathmandu
+  };
+  map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  // directionsDisplay.setMap(map);
+  
+}
+
+function drawHeatMap(points){
+
+	drawMap();
+
+
+		var heatmapData = [];
+		$.each(points, function(index, point){
+		
+		 heatmapData.push({
+		 	location : point.location,
+		 	weight : point.weight * 5
+		 })
+
+	});
+console.log(heatmapData)
+
+
+var heatmap = new google.maps.visualization.HeatmapLayer({
+  data: heatmapData
+});
+heatmap.setMap(map);
+}
+
+</script>
+
+ <script type="text/javascript">
+ 		total_points = []
+ 		{% for place in places %}
+ 			
+ 			total_points.push({
+ 				location : new google.maps.LatLng({{place.latitude}}, {{place.longitude}}),
+ 				weight : {{place.num_victim}}
+ 				})
+
+ 		{% endfor%}
+
+ 		// console.log(total_points)
+      window.onload = drawHeatMap(total_points);
+    </script>
+
+
+
+
+
+
+</body>
+</html>

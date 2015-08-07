@@ -1,0 +1,145 @@
+[
+    {
+        "model": "VictimMap.Place", 
+        "pk": 1, 
+        "fields": {
+            "latitude": "27.6663423", 
+            "longitude": "85.3330053"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 2, 
+        "fields": {
+            "latitude": "27.6999738", 
+            "longitude": "85.2890594"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 3, 
+        "fields": {
+            "latitude": "27.6755549", 
+            "longitude": "85.3459238"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 4, 
+        "fields": {
+            "latitude": "27.6630019", 
+            "longitude": "85.2774207"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 5, 
+        "fields": {
+            "latitude": "27.7107552", 
+            "longitude": "85.3485072"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 6, 
+        "fields": {
+            "latitude": "27.6755549", 
+            "longitude": "85.3459238"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 7, 
+        "fields": {
+            "latitude": "27.7422217", 
+            "longitude": "85.3322992"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 8, 
+        "fields": {
+            "latitude": "27.6644011", 
+            "longitude": "85.3187914"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 9, 
+        "fields": {
+            "latitude": "27.7064565", 
+            "longitude": "85.3164261"
+        }
+    }, 
+    {
+        "model": "VictimMap.Place", 
+        "pk": 10, 
+        "fields": {
+            "latitude": "27.7170009", 
+            "longitude": "85.2735406"
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 1, 
+        "fields": {
+            "place": 1
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 2, 
+        "fields": {
+            "place": 2
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 3, 
+        "fields": {
+            "place": 3
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 4, 
+        "fields": {
+            "place": 1
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 5, 
+        "fields": {
+            "place": 2
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 6, 
+        "fields": {
+            "place": 3
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 7, 
+        "fields": {
+            "place": 1
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 8, 
+        "fields": {
+            "place": 2
+        }
+    }, 
+    {
+        "model": "VictimMap.Victim", 
+        "pk": 9, 
+        "fields": {
+            "place": 3
+        }
+    }
+]
