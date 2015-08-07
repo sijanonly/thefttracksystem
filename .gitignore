@@ -55,6 +55,9 @@ docs/_build/
 
 # PyBuilder
 target/
+<<<<<<< HEAD
 
 # PyCharm IDE
 .idea
+=======
+>>>>>>> c8224fd64bdb8523ba5e2ec6fe62d22ee4b82fee
